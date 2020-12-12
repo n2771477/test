@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>1111</div>
+    <script>
+        const list = [{
+            vie: {
+                ni: 123,
+                ni1: 123,
+                ni2: 123
+            },
+        }
+            , {
+            vie1: {
+                ni4: { qie: 456 }
+            }
+        }
+        ]
+        const newlist = list.map(function (test) {
+            return test
+        })
+        const newlist1 = JSON.parse(JSON.stringify(list));
+        const newlist2 = Object.assign([], list[1].vie1);
+
+        console.log('list:::', list)
+        newlist[1].vie1.ni4.qie = 789;
+        console.log('newlist:::', newlist)
+        console.log('newlist0:::', newlist1)
+        console.log('newlist2:::', newlist2)
+    </script>
+</body>
+
+</html>
